@@ -1,2 +1,6 @@
 # Welcome to the my website
-## Some new text
+## Tony Bush
+### Phone
+314-368-4335
+### Email
+tbush01@gmail.com
