@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/* Wrappers are top containers*/
+
+.wrapperGreeting {
+  background-color: #eee;
+  max-width: 100%;
+  height: 500px;
+}
+
+
+.wrapperCode {
+  background-color: #fff;
+  max-width: 100%;
+  min-height: 250px;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  justify-content: center;
+
+}
+
+
+.wrapperArt {
+  background-color: #eee;
+  max-width: 100%;
+  min-height: 250px;
+}
+
+
+
+
+/* Boxes are children of wrappers*/
+
+.boxGreeting {
+  display: grid;
+
+  align-content: center;
+}
+
+.boxCode  {
+
+
+}
+
+.boxArt {
+
+}

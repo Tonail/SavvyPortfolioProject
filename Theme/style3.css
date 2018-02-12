@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-width: 480px;
+}
+
+
+h2.code {
+  font-size: ;
+}
+
+
+
+h1.header {
+  color: rgb(255, 10, 45);
+}
+
+p.header {
+  font-weight: bold;
+  font-size: 2em
+  color: rgb(200, 200, 200);
+}
+
+h1.title {
+  color: white;
+}
+
+img {
+  max-height:auto;
+  min-height: auto;
+  max-width: auto;
+  min-width: auto;
+}
+
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 80px 780px 1fr 3fr 2fr 50px;
+  grid-template-areas:
+  "title title title title title"
+  "header header header header header"
+  "code code code code code"
+  ". art art art ."
+  ". . contact . ."
+  "footer footer footer footer footer";
+}
+
+.title {
+  grid-area: title;
+  color: white;
+  background: black;
+  display: grid;
+  justify-content: left;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(100, 100, 100);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.code {
+  grid-area: code;
+  background-color: rgb(175, 175, 175);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-gap: 5px;
+  justify-content: center;
+  width: auto;
+
+}
+.code .headera {
+  grid-area: headera;
+  justify-content: center;
+  color: blue;
+  grid-row: span;
+}
+
+.art {
+  grid-area: art;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr
+}
+
+.contact {
+  grid-area: contact;
+  justify-self: center;
+  display: grid;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: center;
+
+}
+
+
+
+
+
+
+
+/*
+.grid div:nth-child(even) {
+  background-color: red;
+}
+
+.grid div:nth-child(odd) {
+  background-color: green;
+}
+*/
+
+
+
+@media screen and (min-width: 736px); {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". title title title ."
+    ". header header header ."
+    ". code code code ."
+    ". art art art ."
+    ". . contact . ."
+    ". footer footer footer .";
+  }
+}

@@ -1,0 +1,58 @@
+h1 {
+  color: rgb(255, 68, 121);
+  font-family: Helvetica;
+  style=font-size:2em;
+}
+
+
+div {
+
+
+  }
+
+
+
+h3.code {
+  color:rgb(255, 10, 45);
+}
+
+li.code {
+  display: inline;
+}
+
+
+.backdrop {
+  z-index: 1;
+  background-color: rgb(60, 60, 60);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+.mid-width {
+  width: 500px;
+}
+
+.code {
+  background-color: rgb(40, 55, 77);
+  width: 100%;
+  font-family: monospace;
+}
+
+.art {
+  background-color: rgb(230, 230, 230);
+  background-size: auto;
+  width: 100%;
+  font-family: sans-serif;
+  color: rgb(60, 75, 99);
+}
+
+#tony {
+  background-color: chartreuse;
+}
