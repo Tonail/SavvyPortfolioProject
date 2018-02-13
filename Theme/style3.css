@@ -1,13 +1,10 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  min-width: 480px;
 }
 
-
-h2.code {
-  font-size: ;
+h2 {
+  font-size: 3em;
 }
 
 
@@ -24,25 +21,105 @@ p.header {
 
 h1.title {
   color: white;
+  font-size: 4em;
 }
 
 img {
-  max-height:auto;
+  max-height: auto;
   min-height: auto;
   max-width: auto;
   min-width: auto;
 }
 
+#content li:nth-child(2n) {
+  background-color: rgb(120, 120, 120);
+}
 
+
+#navigation > ul {
+  color: white;
+  background-color: red;
+  font-size: 2em;
+}
+
+#navigation li {
+  text-decoration: none;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+#navigation > h1 {
+  font-size: 4em;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+/*
+.grid-blog {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 80px 500px 50px;
+  grid-template-areas:
+  "nav nav nav"
+  "header header header"
+  "content content content"
+  "footer footer footer"
+  ;
+}
+*/
+
+ul.navigation {
+  text-decoration: none;
+}
+
+
+
+#navigation {
+/*  grid-area: nav; */
+  padding: 15px;
+  width: auto;
+  background-color: black;
+  color: white;
+  border: auto;
+}
+
+#header{
+/*  grid-area: header; */
+  height: 500px;
+  width: auto;
+  background-color: rgb(120, 120, 120);
+}
+
+#content {
+  display: grid;
+  grid-area: content;
+  justify-content: center;
+
+}
+
+#footer {
+  grid-area: footer;
+}
+
+
+/*
 
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-  grid-template-rows: 80px 780px 1fr 3fr 2fr 50px;
+  grid-template-rows: 80px 780px 80px 480px 3fr 2fr 50px;
   grid-template-areas:
   "title title title title title"
   "header header header header header"
+  "codea codea codea codea codea"
   "code code code code code"
   ". art art art ."
   ". . contact . ."
@@ -70,17 +147,18 @@ img {
   background-color: rgb(175, 175, 175);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 1fr;
   grid-gap: 5px;
   justify-content: center;
-  width: auto;
-
+  align-content: ;
+  justify-self: center;
 }
-.code .headera {
-  grid-area: headera;
+.codea {
+  background-color: rgb(175, 175, 175);
+  grid-area: codea;
+  display: grid;
   justify-content: center;
+  grid-template-columns: 1fr 3fr 1fr
   color: blue;
-  grid-row: span;
 }
 
 .art {
