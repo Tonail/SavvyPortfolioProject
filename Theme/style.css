@@ -1,58 +1,228 @@
-h1 {
-  color: rgb(255, 68, 121);
-  font-family: Helvetica;
-  style=font-size:2em;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-
-div {
-
-
-  }
-
-
-
-h3.code {
-  color:rgb(255, 10, 45);
-}
-
-li.code {
-  display: inline;
-}
-
-
-.backdrop {
-  z-index: 1;
-  background-color: rgb(60, 60, 60);
-  background-repeat: no-repeat;
-  background-size: cover;
+h2 {
+  font-size: 3em;
 }
 
 
 
-
-
-
-
-
-.mid-width {
-  width: 500px;
+h1.header {
+  color: rgb(255, 10, 45);
 }
 
-.code {
-  background-color: rgb(40, 55, 77);
-  width: 100%;
-  font-family: monospace;
+p.header {
+  font-weight: bold;
+  font-size: 2em
+  color: rgb(200, 200, 200);
 }
 
-.art {
-  background-color: rgb(230, 230, 230);
+h1.title {
+  color: white;
+  font-size: 4em;
+}
+
+img {
+  max-height: auto;
+  min-height: auto;
+  max-width: auto;
+  min-width: auto;
+}
+
+#content li:nth-child(2n) {
+  background-color: rgb(120, 120, 120);
+}
+
+
+#navigation > ul {
+  color: white;
+  background-color: #15ccc5;
+  font-size: 1em;
+}
+
+#navigation li {
+  text-decoration: none;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+#navigation > h1 {
+  font-size: 3em;
+}
+
+.container.header {
+  background-image: url("../media/Background-01.png");
+  background-color: blue;
   background-size: auto;
-  width: 100%;
+  background-position: center;
+  height: 500px;
+  width: auto;
+  max-width: 1200px;
+  color: White;
   font-family: sans-serif;
-  color: rgb(60, 75, 99);
+  font-weight: bold;
+  justify-content: center;
+
+
 }
 
-#tony {
-  background-color: chartreuse;
+.container {
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+/*
+.grid-blog {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 80px 500px 50px;
+  grid-template-areas:
+  "nav nav nav"
+  "header header header"
+  "content content content"
+  "footer footer footer"
+  ;
+}
+
+*/
+
+ul.navigation {
+  text-decoration: none;
+}
+
+
+#content .title {
+  font-family: serif;
+  font-size: 2em;
+  font-style: italic;
+  color
+}
+
+
+
+
+
+#navigation {
+/*  grid-area: nav; */
+  padding: 15px;
+  width: auto;
+  background-image: repeating-linear-gradient(#ff4079, #cd14a7);
+  color: white;
+}
+
+#header{
+/*  grid-area: header; */
+  height: 500px;
+  width: auto;
+  background-color: #537f27;
+}
+
+#content {
+  display: grid;
+  grid-area: content;
+  justify-content: center;
+
+}
+
+#footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+
+}
+
+
+/*
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 80px 780px 80px 480px 3fr 2fr 50px;
+  grid-template-areas:
+  "title title title title title"
+  "header header header header header"
+  "codea codea codea codea codea"
+  "code code code code code"
+  ". art art art ."
+  ". . contact . ."
+  "footer footer footer footer footer";
+}
+.title {
+  grid-area: title;
+  color: white;
+  background: black;
+  display: grid;
+  justify-content: left;
+}
+.header {
+  grid-area: header;
+  background-color: rgb(100, 100, 100);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.code {
+  grid-area: code;
+  background-color: rgb(175, 175, 175);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-content: center;
+  align-content: ;
+  justify-self: center;
+}
+.codea {
+  background-color: rgb(175, 175, 175);
+  grid-area: codea;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 3fr 1fr
+  color: blue;
+}
+.art {
+  grid-area: art;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr
+}
+.contact {
+  grid-area: contact;
+  justify-self: center;
+  display: grid;
+}
+.footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: center;
+}
+/*
+.grid div:nth-child(even) {
+  background-color: red;
+}
+.grid div:nth-child(odd) {
+  background-color: green;
+}
+*/
+
+/*
+
+@media screen and (min-width: 736px); {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". title title title ."
+    ". header header header ."
+    ". code code code ."
+    ". art art art ."
+    ". . contact . ."
+    ". footer footer footer .";
+  }
 }
