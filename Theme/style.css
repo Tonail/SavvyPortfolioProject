@@ -113,6 +113,51 @@ textarea {
 
 
 /* Nav dropdown menu */
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-image: repeating-linear-gradient(#cd14a7, #3d9996);
+   min-width: 160px;
+   padding-top: 17px;
+   padding-bottom: 17px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+   top: 38px;
+   
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  margin: 10em auto;
+}
+
+.dropbtn {
+  padding: 16px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: lightgrey;
+}
+
+
+/*
 #navigation div {
   top: 40px;
 
@@ -122,14 +167,15 @@ textarea {
 #navigation .dropdown {
   display: none;
   position: absolute;
+  top:100%;
   left: 0;
   background-image: repeating-linear-gradient(#cd14a7, #3d9996);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 #navigation a:hover {
   color: #537f27;
-
-
 }
 
 #navigation .dropdown:hover,
@@ -139,8 +185,9 @@ textarea {
 
 #navigation li:nth-child(2) {
   position: relative;
+  display: inline-block;
 }
-
+*/
 /*navingation items position*/
 
 #navigation ul.container {
@@ -190,7 +237,8 @@ textarea {
 }
 
 #navigation li {
-  padding: 20px;
+  margin: 0;
+  padding: 3px;
 }
 
 
@@ -206,6 +254,7 @@ textarea {
   height: 3rem;
   margin: 0;
   font-family: sans-serif;
+  z-index: 0;
 }
 
 
