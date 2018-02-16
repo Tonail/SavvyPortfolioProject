@@ -1,3 +1,6 @@
+ul {
+  padding-start: 0;
+}
 body {
   margin: 0;
   padding: 0;
@@ -36,27 +39,9 @@ img {
 }
 
 
-#navigation > ul {
-  color: white;
-  background-color: #15ccc5;
-  font-size: 1em;
-}
-
-#navigation li {
-  text-decoration: none;
-}
-
-#navigation a {
-  color: white;
-  text-decoration: none;
-}
-
-#navigation > h1 {
-  font-size: 3em;
-}
 
 .container.header {
-  background-image: url("../media/Background-01.png");
+  background-image: url("../media/Background-02.png");
   background-color: blue;
   background-size: auto;
   background-position: center;
@@ -100,20 +85,135 @@ ul.navigation {
   font-family: serif;
   font-size: 2em;
   font-style: italic;
-  color
+
+}
+
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: none;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
 }
 
 
 
+
+
+
+
+
+/* Nav dropdown menu */
+#navigation div {
+  top: 40px;
+
+
+}
+
+#navigation .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-image: repeating-linear-gradient(#cd14a7, #3d9996);
+}
+
+#navigation a:hover {
+  color: #537f27;
+
+
+}
+
+#navigation .dropdown:hover,
+#navigation a:hover + .dropdown {
+  display: block;
+}
+
+#navigation li:nth-child(2) {
+  position: relative;
+}
+
+/*navingation items position*/
+
+#navigation ul.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 760px;
+  height: 100%;
+
+}
+
+
+
+
+
+/* Navigation items  */
+
+#navigation ul {
+  list-style-type: none;
+
+}
+
+#navigation > ul > li {
+  display: inline;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+#navigation > ul {
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+#navigation h1 {
+  font-size: 2rem;
+  display: inline;
+  margin: 0;
+}
+
+#navigation li {
+  padding: 20px;
+}
 
 
 #navigation {
 /*  grid-area: nav; */
-  padding: 15px;
-  width: auto;
+  height: 53px;
+  width: 100vw;
   background-image: repeating-linear-gradient(#ff4079, #cd14a7);
   color: white;
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 3rem;
+  margin: 0;
+  font-family: sans-serif;
 }
+
+
+/* Header  Section        */
+
+
+
+
 
 #header{
 /*  grid-area: header; */
@@ -131,8 +231,11 @@ ul.navigation {
 
 #footer {
   grid-area: footer;
+  display: flex;
+  align-content: flex-end;
   background-color: black;
   color: white;
+  align-content:flex-end;
 
 }
 
