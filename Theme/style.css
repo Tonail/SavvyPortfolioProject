@@ -10,8 +10,6 @@ h2 {
   font-size: 3em;
 }
 
-
-
 h1.header {
   color: rgb(255, 10, 45);
 }
@@ -33,9 +31,6 @@ img {
   max-width: auto;
   min-width: auto;
 }
-
-
-
 
 .container.header {
   background-image: url("../media/Background-02.png");
@@ -152,43 +147,24 @@ textarea {
     display: block;
   }
 
-  .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
     background-color: lightgrey;
 }
 
 
-/*
-#navigation div {
-  top: 40px;
-
-
+#navigation {
+  height: 53px;
+  width: 100vw;
+  background-image: repeating-linear-gradient(#ff4079, #cd14a7);
+  color: white;
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 3rem;
+  margin: 0;
+  font-family: sans-serif;
+  z-index: 0;
 }
-
-#navigation .dropdown {
-  display: none;
-  position: absolute;
-  top:100%;
-  left: 0;
-  background-image: repeating-linear-gradient(#cd14a7, #3d9996);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-}
-
-#navigation a:hover {
-  color: #537f27;
-}
-
-#navigation .dropdown:hover,
-#navigation a:hover + .dropdown {
-  display: block;
-}
-
-#navigation li:nth-child(2) {
-  position: relative;
-  display: inline-block;
-}
-*/
-/*navingation items position*/
 
 #navigation ul.container {
   display: flex;
@@ -199,10 +175,6 @@ textarea {
   height: 100%;
 
 }
-
-
-
-
 
 /* Navigation items  */
 
@@ -241,51 +213,46 @@ textarea {
   padding: 3px;
 }
 
-
-#navigation {
-/*  grid-area: nav; */
-  height: 53px;
-  width: 100vw;
-  background-image: repeating-linear-gradient(#ff4079, #cd14a7);
-  color: white;
-  position: fixed;
-  top: 0;
-  left:0;
-  height: 3rem;
-  margin: 0;
-  font-family: sans-serif;
-  z-index: 0;
-}
-
-
 /* Header  Section        */
 
-
-
-
-
-#header{
-/*  grid-area: header; */
+#header  {
   height: 500px;
   width: auto;
   background-color: #537f27;
 }
 
+#content img {
+  max-width: 100px;
+}
 
-#contact {
-  grid-area: contact;
+
+#content .code > div {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  flex-direction: column;
+  order: 1;
+}
+
+#content .art > div {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  flex-direction: column;
+  order: 2;
 }
 
 
 #content {
   display: grid;
-  grid-area: content;
-  justify-content: center;
-
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px minmax(100px, auto) 50px;
 }
 
 #footer {
-  grid-area: footer;
   display: flex;
   align-content: flex-end;
   background-color: black;
@@ -294,93 +261,11 @@ textarea {
 
 }
 
+/* grid area */
 
-/*
-.grid {
+.wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-  grid-template-rows: 80px 780px 80px 480px 3fr 2fr 50px;
-  grid-template-areas:
-  "title title title title title"
-  "header header header header header"
-  "codea codea codea codea codea"
-  "code code code code code"
-  ". art art art ."
-  ". . contact . ."
-  "footer footer footer footer footer";
-}
-.title {
-  grid-area: title;
-  color: white;
-  background: black;
-  display: grid;
-  justify-content: left;
-}
-.header {
-  grid-area: header;
-  background-color: rgb(100, 100, 100);
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-.code {
-  grid-area: code;
-  background-color: rgb(175, 175, 175);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
-  justify-content: center;
-  align-content: ;
-  justify-self: center;
-}
-.codea {
-  background-color: rgb(175, 175, 175);
-  grid-area: codea;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 3fr 1fr
-  color: blue;
-}
-.art {
-  grid-area: art;
-  justify-content: center;
-  display: grid;
-  grid-template-rows: 1fr 2fr 2fr 1fr
-}
-.contact {
-  grid-area: contact;
-  justify-self: center;
-  display: grid;
-}
-.footer {
-  grid-area: footer;
-  background-color: black;
-  color: white;
-  display: grid;
-  justify-content: center;
-}
-/*
-.grid div:nth-child(even) {
-  background-color: red;
-}
-.grid div:nth-child(odd) {
-  background-color: green;
-}
-*/
-
-/*
-
-@media screen and (min-width: 736px); {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    ". title title title ."
-    ". header header header ."
-    ". code code code ."
-    ". art art art ."
-    ". . contact . ."
-    ". footer footer footer .";
-  }
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: 50px minmax(100px, auto) 50px;
 }
