@@ -1,21 +1,18 @@
+
 body {
+  width: 100vw;
+}
+
+.wrapper {
   display: grid;
-  grid-template-rows: 30vh 1fr 10%;
   grid-template-areas:
-    "header"
-    "content"
-    "footer";
-  grid-row-gap: 1rem;
-}
-
-.content {
-  display: grid;
-  grid-gap: 0.25rem;
-}
-
-.content > div {
-  padding: 1rem;
-  background-color: #a8a8a8;
+    "nav nav nav"
+    "header header header"
+    "content content content"
+    "footer footer footer";
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 47px minmax(0, 100%) minmax(0, 100%) 100px;
+    height: 100%;
 }
 
 
@@ -24,7 +21,8 @@ body {
 
 
 
-/* mobile area */
+
+/* mobile area */s
 
 @media (min-width: 415px) {
   .content {

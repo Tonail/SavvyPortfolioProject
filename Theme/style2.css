@@ -1,4 +1,10 @@
 
+h5 {
+  font-size: 1em;
+}
+
+
+
 
 /* Navigation */
 
@@ -50,7 +56,7 @@
 }
 
 #navigation {
-  grid-area: header;
+  grid-area: nav;
   height: 53px;
   width: 100vw;
   background-image: repeating-linear-gradient(#ff4079, #cd14a7);
@@ -61,7 +67,7 @@
   height: 3rem;
   margin: 0;
   font-family: sans-serif;
-  z-index: 0;
+  z-index: 3;
 }
 
 /* dropdown menu */
@@ -110,6 +116,122 @@
 
 /* Page content area */
 
-.content {
-  display: grid
+
+/* Page header area */
+
+.background-image {
+  background-image: url("../media/Background-02.png");
+  background-size: cover;
+
+}
+
+#header {
+  display: grid;
+  grid-area: header;
+  justify-content: center;
+  height: 100%;
+  grid-template-rows: minmax(1fr, auto) minmax(2fr, 4fr);
+  grid-gap: 0;
+  z-index: 2;
+
+}
+
+#header h1 {
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#header img {
+  width: 100vw;
+}
+
+.header {
+  position: relative;
+}
+
+.header h1 {
+  position: absolute;
+  font-size: 2em;
+
+}
+
+.backgrond {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  width: 100vw;
+  height: minmax(0px, auto)
+}
+
+/* Page content area */
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: content;
+  background-color: lightgrey;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: -5px;
+}
+
+#content div {
+  margin-top: 30px;
+}
+
+#content div:first-child {
+  margin-top: 0;
+  background-color: darkgray;
+  background-size: 100vw;
+}
+
+
+
+
+
+/* Footer Section */
+
+
+
+
+#footer {
+  display: flex;
+  grid-area: footer;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+#footer h5 {
+  display: inline;
+  padding-left: 50px
+}
+
+#footer ul {
+  display: inline;
+  padding-right: 50px
+}
+
+#footer ul > li {
+  display: inline;
+  padding: 5px;
+  text-decoration: none;
+  color: White;
+  font-size: 1.5rem;
+}
+
+#footer a {
+  text-decoration: none;
+  color: White;
+}
+
+#footer img {
+  height: 30px;
 }
