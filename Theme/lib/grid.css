@@ -17,12 +17,12 @@ body {
 
 
 
+/* tablet area*/
 
 
 
 
-
-/* mobile area */s
+/* mobile area */
 
 @media (min-width: 415px) {
   .content {
