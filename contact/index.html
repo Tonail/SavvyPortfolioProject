@@ -4,51 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.cssS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
-  <link rel="stylesheet" href="../Theme/style.css">
+  <link rel="stylesheet" href="../Theme/lib/grid.css">
+  <link rel="stylesheet" href="../Theme/style2.css">
   <title>Contact</title>
 </head>
 <body>
-  <div id="navigation">
-    <ul class="container">
-      <li>
-        <a href="..">
-          <h1>OCAT Design</h1>
-        </a>
-      </li>
-      <li>
-        <div class="dropdown">
-          <a href="../projects/index.html" class="dropbtn">Projects</a>
-          <div class="dropdown-content">
-            <ul>
-              <li>first</li>
-              <li>second</li>
-              <li>third</li>
-            </ul>
+  <div class="wrapper">
+    <div id="navigation">
+      <ul class="container">
+        <li>
+          <a href="..">
+            <h1>OCAT Design</h1>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a href="../projects/index.html" class="dropbtn">Projects</a>
+            <div class="dropdown-content">
+              <ul>
+                <li>first</li>
+                <li>second</li>
+                <li>third</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <a href="../blog/">Blog</a>
-      </li>
-      <li>
-        <a href=".">Contact</a>
-      </li>
-    </ul>
-  </div>
+        </li>
+        <li>
+          <a href="../blog/">Blog</a>
+        </li>
+        <li>
+          <a href=".">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div id="header">
+      <div class="">
+        <img src="bac" alt="">
+      </div>
+    </div>
+    <div id="content" class="white-background">
+      <div>
+        <h1>Thank you!</h1>
+        <p>Really, Thanks for stopping by!</p>
+      </div>
 
-  <div id="contact">
-    <div class="container">
-      <form action="https://formspree.io/tbush01@gmail.com" method="POST">
-        <input type="text" name="firstname" value="First Name" size="100" autofocus>
-        <input type="text" name="lastname" value="Last Name" size="100">
-        <input type="email" name="userEmail" placeholder="your.email@example.com">
-        <label>What's this message about?
-          <input type="radio" name="subject" value="professional" checked><span>I'd like to hire you!</span>
-          <input type="radio" name="subject" value="personal" checked><span>Personal message</span>
-          <input type="radio" name="subject" value="other" checked><span>Don't know/something else</span>
-        </label>
+      <div>
+        <form action="https://formspree.io/tbush01@gmail.com" method="POST">
+          <input type="text" name="firstname" value="First Name" size="100" autofocus>
+          <input type="text" name="lastname" value="Last Name" size="100">
+          <input type="email" name="userEmail" placeholder="your.email@example.com">
+          <label>What's this message about?
+            <input type="radio" name="subject" value="professional" checked><span>I'd like to hire you!</span>
+            <input type="radio" name="subject" value="personal" checked><span>Personal message</span>
+            <input type="radio" name="subject" value="other" checked><span>Don't know/something else</span>
+          </label>
           <label for="marketing">How did you hear about me?</label>
           <select name="marketing">
             <optgroup label="Online">
@@ -68,8 +79,18 @@
           <input type="submit">
         </form>
       </div>
-  <div id="footer">
-    <h2>Section</h2>
+    </div>
+    <div id="footer">
+      <h5>follow me on</h5>
+      <ul>
+        <li>
+          <a href="https://github.com/Tonail"><img src="../media/github-logo.svg" alt="github"></a>
+        </li>
+        <li>
+          <a href="https://www.behance.net/tbush011874"><img src="../media/behance-logo-button.svg" alt="behance"></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
