@@ -83,7 +83,7 @@ h3 {
   height: 3rem;
   margin: 0;
   font-family: sans-serif;
-  z-index: 3;
+  z-index: 10;
 }
 
 /* dropdown menu */
@@ -138,7 +138,6 @@ h3 {
 .background-image {
   background-image: url("../media/Background-02.png");
   background-size: 100vw;
-  background-repeat:
 
 }
 
@@ -185,6 +184,7 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
 }
 
 /* Page content area */
@@ -198,15 +198,15 @@ h3 {
   background-color: lightgrey;
   margin: 0;
   margin-top: -5px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index:3;
 }
 
 
 #content > div:first-child {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 0px;
-  padding-top: 25%;
   padding-bottom: 50px;
   background-size: 100vw;
   background-color: lightgrey;
@@ -223,7 +223,6 @@ h3 {
 #content > div:last-child {
   margin-bottom: 50px;
   margin-top: 0;
-  padding-bottom: 100%;
 }
 
 #content > div:last-child a {
@@ -358,6 +357,20 @@ h3 {
 .link-button img {
   height: 20px;
 }
+
+/*conetents form styles*/
+input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], textarea, select  {
+  background-color: white;
+  border: 0.1rem solid #ff4079;
+}
+
+textarea[name="user_message"] {
+  resize: vertical;
+  max-height: 300px;
+}
+
+
+
 
 
 

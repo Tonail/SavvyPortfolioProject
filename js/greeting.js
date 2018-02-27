@@ -1,11 +1,11 @@
 var greetUser = function greetUser(){
-    var firstName = prompt( "What is your name" );
+    var firstName = prompt( "What is your Name" );
 
     if( !firstName ){
         greetUser();
     }
     else{
-        alert( "Hello " + firstName );
+        console.log( document.querySelector( "#content div:first-child > h3" ).textContent = "Whats up! " + firstName );
     }
 };
 
