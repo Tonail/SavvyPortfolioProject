@@ -26,8 +26,13 @@ h3 {
 #navigation{
   grid-area: nav;
   z-index: 1000;
+  font-family: Helvetica;
+  font-weight: 700;
 }
+.sub-menu ul{
+  background-image: repeating-linear-gradient(rgba(0, 0, 0, .25), #ff4079);
 
+}
 
 
 nav ul {
@@ -46,13 +51,14 @@ nav ul li a{
   padding:.8rem 1rem;
   display: block;
   color: #f9f9f9;
+  text-transform: capitalize;
+
 }
 
 nav ul li:hover{
   background: rgba(0, 0, 0, .25)
 
 }
-
 
 
 
@@ -348,6 +354,12 @@ textarea[name="user_message"] {
 
 
 @media only screen and (min-width:480px){
+  #navigation div:first-child {
+    display:none;
+  }
+  nav div:first-child {
+    display:none;
+  }
   nav ul{
     flex-direction: row;
     justify-content: space-between;
@@ -376,6 +388,20 @@ textarea[name="user_message"] {
 
 }
 @media only screen and (max-width:480px){
+  nav {
+    display: none;
+  }
+  #navigation div:first-child {
+    display:block;
+    background-color: #ff4079;
+    width: 100vw;
+    height: 100%
+  }
+  .menuButton{
+    left:0;
+    top:0;
+  }
+
   nav ul{
     flex-direction: column;
     justify-content: space-between;
@@ -386,4 +412,9 @@ textarea[name="user_message"] {
   .sub-menu ul .sub-menu ul{
     padding-left: 3rem
   }
+  .sub-menu ul{
+    background-color: rgba(0, 0, 0, .25);
+
+  }
+
 }

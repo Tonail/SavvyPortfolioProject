@@ -1,4 +1,4 @@
-var output = document.querySelector( "#loops" );
+var output = $( "#loops" );
 var list = "<ol>";
 
 var fizzyBuzz = "<ul>";
@@ -10,7 +10,8 @@ for( let i = 1; i <= 10; i++ ){
 
 list += "</ol>";
 
-output.innerHTML = list;
+$( output )
+    .append( list );
 
 
 for( let i = 1; i <= 100; i++ ){
@@ -30,4 +31,5 @@ for( let i = 1; i <= 100; i++ ){
 
 fizzyBuzz += "</ul>";
 
-output.innerHTML += fizzyBuzz;
+$( output )
+    .append( fizzyBuzz );
