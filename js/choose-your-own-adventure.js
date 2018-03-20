@@ -31,25 +31,31 @@ var story = {
     }
 };
 
+// sort through object
+
 var choice = "start";
 var storyChoice = story[choice];
-var $output = $( "#output" );
 
 var choiceOne = story[choice]["option"][0];
 var choiceTwo = story[choice]["option"][1];
 
-var $choiceOneBox = $( "#choiceTwo" );
-var $choiceTwoBox = $( "#choiceTwo" );
+// Dom selections
 
-var $choiceOne = $( "div#choiceOne > h1" );
-var $choiceTwo = $( "div#choiceTwo > h1" );
+var $choiceOne = $( "#choiceOne" );
+var $choiceTwo = $( "#choiceTwo" );
+
+var $box = [ $( ".boxOne" ), $( ".boxTwo" ) ];
+var $story = $( ".story" );
+
+var $output = $( "#output" );
 
 // Output Section
+
 function Output(){
     $( $output )
-        .html( "<div class='story'><p>" + storyChoice.text + "</p><div>" )
-        .append( "<div class='box' id='choiceOne'><h1>" + choiceOne + "</h1></div>" )
-        .append( "<div class='box' id='choiceTwo'><h1>" + choiceTwo + "</h1></div>" );
+        .html( $story.html( "<p>" + storyChoice.text + "</p>" ) )
+        .append( $box[0].html( $choiceOne.text( choiceOne ) ) )
+        .append( $box[1].html( $choiceTwo.text( choiceTwo ) ) );
     $output
         .css( {
             "height": "100%",
@@ -59,7 +65,7 @@ function Output(){
             "flex-direction": "row",
             "flex-flow": "row wrap"
         } );
-    $( ".story" )
+    $story
         .css( {
             "height": "100%",
             "width": "100%",
@@ -68,34 +74,42 @@ function Output(){
             "flex-direction": "row",
             "font-family": "serif"
         } );
-    $( ".story > p" )
-        .css( {
-            "padding-top": "50px"
-        } );
-    $( ".box" )
-        .css( {
-            "width": "48%",
-            "height": "50px",
-            "color": "white",
-            "background-color": "black",
-            "display": "flex",
-            "border-style": "solid",
-            "border-width": "1px",
-            "border-color": "rgba(255, 255, 255, 20)",
-            "justify-content": "center"
-        } );
-    $( ".box > h1" )
-        .css( {
-            "color": "white",
-            "display": "block",
-            "font-size": "1em"
-        } );
+    $box[0].css( {
+        "width": "48%",
+        "height": "50px",
+        "color": "white",
+        "background-color": "black",
+        "display": "flex",
+        "border-style": "solid",
+        "border-width": "1px",
+        "border-color": "rgba(255, 255, 255, 20)",
+        "justify-content": "center"
+    } );
+    $box[1].css( {
+        "width": "48%",
+        "height": "50px",
+        "color": "white",
+        "background-color": "black",
+        "display": "flex",
+        "border-style": "solid",
+        "border-width": "1px",
+        "border-color": "rgba(255, 255, 255, 20)",
+        "justify-content": "center"
+    } );
 }
 
-Output();
-
+// click start begin game.
+// if$choiceOne.one( "click", Output );
+$choiceOne.one( "click", Output );
 
 // click box get choice
-$choiceOneBox.on( "click", () => choice = $choiceOne.text() );
 
-$choiceTwoBox.on( "click", () => choice = $choiceTwo.text() );
+
+$choiceOne.on( "click", () =>
+    choice = choiceOne
+);
+
+
+$choiceTwo.on( "click", () =>
+    choice = choiceTwo
+);

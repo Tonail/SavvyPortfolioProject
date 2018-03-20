@@ -21,7 +21,6 @@ $greet
     } );
 
 function inputCallBack( event ){
-    console.log( event );
     if( event.which === 13 ){
         greetUser();
     }
