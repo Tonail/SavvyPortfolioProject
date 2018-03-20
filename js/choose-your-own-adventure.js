@@ -1,3 +1,5 @@
+/* globals $ */
+
 
 var story = {
     "start": {
@@ -36,6 +38,11 @@ var $output = $( "#output" );
 var choiceOne = story[choice]["option"][0];
 var choiceTwo = story[choice]["option"][1];
 
+var $choiceOneBox = $( "#choiceTwo" );
+var $choiceTwoBox = $( "#choiceTwo" );
+
+var $choiceOne = $( "div#choiceOne > h1" );
+var $choiceTwo = $( "div#choiceTwo > h1" );
 
 // Output Section
 function Output(){
@@ -43,7 +50,7 @@ function Output(){
         .html( "<div class='story'><p>" + storyChoice.text + "</p><div>" )
         .append( "<div class='box' id='choiceOne'><h1>" + choiceOne + "</h1></div>" )
         .append( "<div class='box' id='choiceTwo'><h1>" + choiceTwo + "</h1></div>" );
-    $( "#output" )
+    $output
         .css( {
             "height": "100%",
             "width": "100%",
@@ -88,42 +95,7 @@ function Output(){
 Output();
 
 
-$( "#choiceOne" ).click( function(){
-    choice = $( "div#choiceOne > h1" ).text();
-} );
+// click box get choice
+$choiceOneBox.on( "click", () => choice = $choiceOne.text() );
 
-$( "#choiceTwo" ).click( function(){
-    choice = $( "div#choiceTwo > h1" ).text();
-} );
-
-if( choice = story[choice]["option"][0] ){
-    Output();
-}
-else if( choice = story[choice]["option"][1] ){
-    Output();
-}
-
-
-/*
-if( choice === "grail" ){
-    prompt( story[choice]["text"] );
-    if( choice === "drink" ){
-        prompt( story[choice]["text"] );
-        if( choice === "bite" ){
-            prompt( story[choice]["text"] );
-        }
-        else if( choice === "leave" ){
-            prompt( story[choice]["text"] );
-        }
-    }
-    else if( choice === "view" ){
-        prompt( story[choice]["text"] );
-    }
-}
-else if( choice === "mummy" ){
-    alert( story[choice]["text"] );
-}
-else{
-    prompt( "give me a real choice" );
-}
-*/
+$choiceTwoBox.on( "click", () => choice = $choiceTwo.text() );

@@ -107,7 +107,7 @@ nav ul li:hover{
 }
 
 .parallax {
-  background-image: url("../media/Background-02.png");
+  background-image: url("../media/Hobbit Hole.jpg");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -354,6 +354,10 @@ textarea[name="user_message"] {
 
 
 @media only screen and (min-width:480px){
+  nav {
+    display: block;
+  }
+
   #navigation div:first-child {
     display:none;
   }
