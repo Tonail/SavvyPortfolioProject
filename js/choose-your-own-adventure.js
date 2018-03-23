@@ -8,7 +8,7 @@ var story = {
     },
     "wait": {
         "text": "Would you like to go to the museum?",
-        "option": [ "Yes", "No" ]
+        "option": [ "start", "" ]
     },
     "start": {
         "text": "Welcome to the Creep ville's museum of aniquities, What bring you in today? Do you visit the Holy Grail, or the Mummy exibit?",
@@ -49,83 +49,66 @@ var choiceTwo = story[choice]["option"][1];
 
 // Dom selections
 
-var $choiceOne = $( "#choiceOne" );
-var $choiceTwo = $( "#choiceTwo" );
+var $buttonOne = $( "#buttonOne" );
+var $buttonTwo = $( "#buttonTwo" );
 
-var $box = [ $( ".boxOne" ), $( ".boxTwo" ) ];
-var $story = $( ".story" );
+var $boxOne = $( ".boxOne" )
+    .css( {
+        "width": "48%",
+        "height": "50px",
+        "color": "white",
+        "background-color": "black",
+        "display": "flex",
+        "border-style": "solid",
+        "border-width": "1px",
+        "border-color": "rgba(255, 255, 255, 20)",
+        "justify-content": "center"
+    } );
 
-var $output = $( "#output" );
+var $boxTwo = $( ".boxTwo" )
+    .css( {
+        "width": "48%",
+        "height": "50px",
+        "color": "white",
+        "background-color": "black",
+        "display": "flex",
+        "border-style": "solid",
+        "border-width": "1px",
+        "border-color": "rgba(255, 255, 255, 20)",
+        "justify-content": "center",
+
+    } );
+var $story = $( ".story" ).css( {
+    "height": "100%",
+    "width": "100%",
+    "color": "black",
+    "font-family": "serif"
+} );
+
+
+var $output = $( "#output" ).css( {
+    "display": "flex",
+    "flex-direction": "row",
+    "flex-flow": "row wrap"
+} );
 
 // Output Section
 
-var Output = function Output(){
-    $( $output )
-        .html( $story.html( "<p>" + storyChoice.text + "</p>" ) )
-        .append( $box[0].html( $choiceOne.text( choiceOne ) ) )
-        .append( $box[1].html( $choiceTwo.text( choiceTwo ) ) );
-    $output
-        .css( {
-            "height": "100%",
-            "width": "100%",
-            "margin": "0",
-            "display": "flex",
-            "flex-direction": "row",
-            "flex-flow": "row wrap"
-        } );
-    $story
-        .css( {
-            "height": "100%",
-            "width": "100%",
-            "color": "black",
-            "display": "flex",
-            "flex-direction": "row",
-            "font-family": "serif"
-        } );
-    $box[0].css( {
-        "width": "48%",
-        "height": "50px",
-        "color": "white",
-        "background-color": "black",
-        "display": "flex",
-        "border-style": "solid",
-        "border-width": "1px",
-        "border-color": "rgba(255, 255, 255, 20)",
-        "justify-content": "center"
-    } );
-    $box[1].css( {
-        "width": "48%",
-        "height": "50px",
-        "color": "white",
-        "background-color": "black",
-        "display": "flex",
-        "border-style": "solid",
-        "border-width": "1px",
-        "border-color": "rgba(255, 255, 255, 20)",
-        "justify-content": "center"
-    } );
+var output = function output(){
+    return  $output
+        .append( $story.html( "<p>" + storyChoice.text + "</p>" ) )
+        .append( $boxOne.append( $buttonOne.text( choiceOne ) ) )
+        .append( $boxTwo.append( $buttonTwo.text( choiceTwo ) ) );
 };
 
+output();
 
-var rightButton = $choiceOne.click( function(){
-    $( this ).data( "clicked", true );
+$buttonOne.on( "click", (  ) => {
+    choice = choiceOne;
+    output();
 } );
 
-var leftButton = $choiceTwo.click( function(){
-    $( this ).data( "clicked", true );
+$buttonTwo.on( "click", (  ) => {
+    choice = choiceTwo;
+    output();
 } );
-
-function wait(resolve, reject){
-    return new Promise(
-      function () {
-      if( $choiceOne.data( "clicked" ) && choice === "wait" ){
-          choice = choiceOne;
-          resolve(choice);
-      }
-      else if( $choiceOne.data( "clicked" ) && choice === "wait" ){
-          choice = choiceOne;
-          reject(choice);
-      };)
-}
-
-wait();
