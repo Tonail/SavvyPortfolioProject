@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
   <link rel="stylesheet" href="../Theme/lib/grid.css">
   <link rel="stylesheet" href="../Theme/style2.css">
   <title>Blog</title>
@@ -62,44 +63,18 @@
       </div>
     </div>
     <div id="content">
+      <div id="output">
+
+      </div>
       <div>
-          <h2 class="title">Blog Post</h2>
-          <ul>
-            <li>
-              <div>
-                <img src="../media/Picture-of-code.png" alt="picture of code">
-                <h2 >Saavy Coders</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quidem eligendi vel labore dolore voluptatem optio sapiente alias reiciendis, assumenda sunt porro delectus aliquid consequuntur nam voluptates tempora, molestiae soluta nihil commodi inventore, minus ipsa. Quam dignissimos itaque asperiores, aliquam sapiente quibusdam totam sint. A sapiente vero, nihil voluptate repellendus. ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, enim perferendis fugit nulla, possimus quis tempore, cupiditate natus vero molestias blanditiis maiores excepturi nostrum. Iste magnam possimus veritatis alias corporis!</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h2 >Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ullam, dolorem quas vero! Unde deserunt rem nostrum ad obcaecati minus quasi quo, odit doloribus. Quasi libero ut autem odit perferendis.</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h2 >Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ducimus et quo. ipsum dolor sit amet, consectetur adipisicing elit. Praesentium repellendus velit similique quia, ratione minima inventore fugiat architecto et, dolores, recusandae voluptatibus. Repudiandae saepe, laudantium labore consectetur consequuntur dolorum obcaecati.</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h2 >Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum facere cupiditate vel pariatur earum distinctio voluptatibus! Vero quos ullam, temporibus, voluptatum libero nisi, laboriosam ut deleniti voluptatibus optio, placeat dignissimos!</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h2 >Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aspernatur, qui molestias illo mollitia eos esse perferendis numquam omnis blanditiis, quas, unde amet provident. Numquam animi dicta quas consectetur reiciendis?</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      <div>
-        <a href="">more</a>
+        <h2>New Post</h2>
+        <form id="newPost">
+          <input type="text" name="user" placeholder="Name">
+          <input type="text" name="image" placeholder="Image URL">
+          <input type="text" name="title" placeholder="Title">
+          <textarea name="post" rows="8" cols="40" placeholder="Write Blog Here"></textarea>
+          <input type="submit">
+        </form>
       </div>
     </div>
     <div id="footer">
@@ -115,6 +90,7 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/blog.js" charset="utf-8"></script>
   <script src="../js/toggleMenu.js" charset="utf-8"></script>
 </body>
 </html>

@@ -2,12 +2,8 @@
 
 
 var story = {
-    "start over": {
-        "text": "Would you like to play again?",
-        "option": [ "wait", "No" ]
-    },
     "wait": {
-        "text": "Would you like to go to the museum?",
+        "text": "Would you like to go to the museum",
         "option": [ "Yes", "No" ]
     },
     "start": {
@@ -59,7 +55,7 @@ var $output = $( "#output" );
 
 // Output Section
 
-var Output = function Output(){
+function Output(){
     $( $output )
         .html( $story.html( "<p>" + storyChoice.text + "</p>" ) )
         .append( $box[0].html( $choiceOne.text( choiceOne ) ) )
@@ -104,28 +100,58 @@ var Output = function Output(){
         "border-color": "rgba(255, 255, 255, 20)",
         "justify-content": "center"
     } );
-};
-
-
-var rightButton = $choiceOne.click( function(){
-    $( this ).data( "clicked", true );
-} );
-
-var leftButton = $choiceTwo.click( function(){
-    $( this ).data( "clicked", true );
-} );
-
-function wait(resolve, reject){
-    return new Promise(
-      function () {
-      if( $choiceOne.data( "clicked" ) && choice === "wait" ){
-          choice = choiceOne;
-          resolve(choice);
-      }
-      else if( $choiceOne.data( "clicked" ) && choice === "wait" ){
-          choice = choiceOne;
-          reject(choice);
-      };)
 }
 
-wait();
+// click start begin game.
+// $choiceOne.one( "click", Output );
+/* function start(){
+    if( choice === "wait" ){
+        choice = "start";
+        Output();
+    }
+}
+
+$choiceOne.one( "click", start );
+*/
+// click box get choice
+
+function rightButton( click, resolve ){
+    click = $choiceOne.on( "click", () => choiceOne );
+
+
+    return choice = click;
+}
+
+
+// function rightButton
+
+
+// count 3 times
+function handleFinish( count, resolve ){
+    console.log( count + " is finished!" );
+
+    if( count < 3 ){
+        randomWait( count + 1 );
+    }
+}
+
+
+function randomWait( count ){
+// Get random number
+    var timeOut = Math.random() * 10000;
+    // return promise
+
+    return new Promise( ( resolve, reject ) => {
+        // sets time until function
+        setTimeout(
+            () => handleFinish( count, resolve ),
+            timeOut
+        );
+    } );
+}
+
+// Count
+randomWait( 1 )
+    .then( randomWait )
+    .then( randomWait )
+    .then( randomWait );
