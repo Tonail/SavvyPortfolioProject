@@ -19,7 +19,7 @@ function prependPost( blog ){
     var $title = $( "<h2>" ).text( blog.title );
     var $image = $( "<img>" ).attr( "src", blog.image );
     var $content = $( "<p>" ).text( blog.post );
-    var $post = $( "#output" ).append( "<div>", $image, $title, $user, $content );
+    var $post = $( "#output" ).append( "div" ).append( $image, $title, $user, $content );
 
     $( "#output" ).prepend( $post );
     console.log( $post );
