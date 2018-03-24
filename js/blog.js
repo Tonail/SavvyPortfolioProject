@@ -6,20 +6,21 @@ var posts = [ {
     "id": 1,
     "user": "Tony Bush",
     "title": "Savvy Coders",
-    "image": "https://google.com",
+    "image": "../media/Picture-of-code.png",
     "post": "That is not an image it is a link to google."
 
 
 } ];
 
 
-// dom lookups Here
+// DOM lookups Here
 function prependPost( blog ){
     var $user = $( "<h3>" ).text( blog.user );
     var $title = $( "<h2>" ).text( blog.title );
     var $image = $( "<img>" ).attr( "src", blog.image );
     var $content = $( "<p>" ).text( blog.post );
-    var $post = $( "#output" ).append( "div" ).append( $image, $title, $user, $content );
+    var $post = $( "<div>" ).append( $image, $title, $user, $content );
+    // Output to the page Console log for debugging
 
     $( "#output" ).prepend( $post );
     console.log( $post );
