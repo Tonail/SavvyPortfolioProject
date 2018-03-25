@@ -38,7 +38,7 @@ $( "form" ).on( "submit", ( event ) => {
 
     // prevents page reload
     event.preventDefault();
-    // form a object of each name and value pair
+    // form a object of each name and value pair from forms field
     data.forEach( ( field ) => {
         formObject[ field.name ] = field.value;
     } );
