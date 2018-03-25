@@ -2,11 +2,16 @@
 
 
 var story = {
-    "start over": {
+    "No": {
+        "text": "Thanks for playing?",
+        "option": [ "Start", "no" ]
+    },
+
+    "Play Again": {
         "text": "Would you like to play again?",
         "option": [ "start", "No" ]
     },
-    "No": {
+    "wait": {
         "text": "Would you like to go to the museum?",
         "option": [ "start", "No" ]
     },
@@ -24,32 +29,32 @@ var story = {
     },
     "view": {
         "text": "You realize that it is just a goblet and 'you aint got no time for that'",
-        "option": [ "start", "No" ]
+        "option": [ "Play Again", "No" ]
 
     },
     "resist": {
         "text": "The Magic of the Holy Grail is too much for you and you are turned to dust for resiting its might",
-        "option": [ "start", "No" ]
+        "option": [ "Play Again", "No" ]
 
     },
     "bite": {
         "text": "You bite the neck of the first Human you see in the museum. Congrats you are now a vampire",
-        "option": [ "start", "No" ]
+        "option": [ "Play Again", "No" ]
     },
     "leave": {
         "text": "You drop the grail and run out of the museum, the last rays of the days sun creep around a tall building and grace your arm with its light. The skin on your arm noticably smokes then burns. Congrats you are now a vamipre ",
-        "option": [ "start", "No" ]
+        "option": [ "Play Again", "No" ]
     },
     "mummy": {
         "text": "You see that the exhibit is empty and go home dissapointed",
-        "option": [ "start", "No" ]
+        "option": [ "Play Again", "No" ]
 
     }
 };
 
-// sort through object
+// sort through options
 
-var choice = "start";
+var choice = "wait"; // sets starting screen
 var storyChoice = story[choice];
 
 var choiceOne = story[choice]["option"][0];
@@ -57,8 +62,6 @@ var choiceTwo = story[choice]["option"][1];
 
 // Dom selections
 
-var $buttonOne = $( "button#buttonOne" );
-var $buttonTwo = $( "#buttonTwo" );
 
 var $boxOne = $( ".boxOne" )
     .css( {
@@ -119,16 +122,17 @@ function click( e ){
     choiceOne = story[choice]["option"][0];
     choiceTwo = story[choice]["option"][1];
 
-    console.log( "a" );
-    console.log( e );
-    console.log( text );
+    console.log( "a" ); // console log for click feedback
+    console.log( e ); // console log click event object for inspection
+    console.log( text ); // console log click event dom node inner text
 }
-function choose( e ){
-    click( e );
-    outputChoice();
+// click and output
+function choose( e ){ // passes event callback to click function
+    click( e ); // click and set output
+    outputChoice();// output
 }
 outputChoice();
 
+// buttons
 $( "button#buttonOne" ).on( "click", choose );
-
 $( "button#buttonTwo" ).on( "click", choose );
