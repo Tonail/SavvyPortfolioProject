@@ -10,10 +10,13 @@ p {
 }
 
 h2 {
-  font-style: italic;
-  font-family: serif;
-  font-weight: bolder;
-  font-size: 2.5em;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #13ccc5;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h3 {
@@ -76,7 +79,8 @@ nav ul li:hover{
   position: relative;
 }
 
-#header h1, #header h2 {
+
+#header h1{
   color: white;
   font-family: sans-serif;
   font-weight: lighter;
@@ -93,7 +97,6 @@ nav ul li:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 64, 121, .25);
   width: 100%;
   height:100%;
   z-index: 10;
@@ -119,7 +122,6 @@ nav ul li:hover{
   align-items: center;
   justify-content: center;
   grid-area: content;
-  background-color: lightgrey;
   margin-top: 0;
   margin-bottom 0;
   padding-left: 10%;
@@ -127,6 +129,8 @@ nav ul li:hover{
   z-index:3;
   height: 100%
 }
+
+
 
 #content > div:first-child {
   padding-bottom: 50px;
@@ -149,8 +153,8 @@ nav ul li:hover{
   display: block;
   color: #ff4079;
   font-family: sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+
   width: 100vw;
 }
 
@@ -224,13 +228,40 @@ nav ul li:hover{
 .link-button img {
   height: 20px;
 }
+#art-projects img{
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, .20);
+}
+.grey-Background {
+  background-color: lightgrey;
 
+}
 #art-projects {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: space-around;
   flex-direction: column;
   flex-flow: wrap;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 50px;
+  border-color: #f9f9f9;
+  border-width: thick;
+
+}
+#art-projects > div {
+  margin-bottom: 50px;
+  width: 50%;
+}
+#art-projects > div:first-child {
+  margin-bottom: 0;
+  width: 100%;
+
+}
+
+
+#art-projects  div > div:nth-child(2) {
+  padding: 5% 20% 5% 20%;
 }
 
 .white-background {
@@ -349,6 +380,26 @@ textarea[name="user_message"] {
 }
 
 @media only screen and (max-width:750px){
+  #art-projects {
+    border-style: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    background-color: lightgrey;
+    margin-bottom: -5px;
+  }
+  #art-projects img{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, .20);
+    width: 100%
+  }
+
+  #content .title {
+    margin: 0;
+
+  }
+  #content{
+    padding:0;
+  }
   #code-projects {
     display: flex;
     justify-content: center;
@@ -357,7 +408,7 @@ textarea[name="user_message"] {
     flex-flow: column;
     width: 100vw;
     padding: 0;
-    margin-top: 0;
+    margin-top: -5px;
   }
   #code-projects > div {
       width: 100%;
@@ -366,13 +417,36 @@ textarea[name="user_message"] {
       align-items: center;
       background-color: #ff4079;
   }
-  #content > div:first-child{
-    margin-top: 0;
+  #content > div:first-child {
+      padding:0;
+      margin-bottom: -5px;
+  }
+  #content > div:last-child {
+      margin-bottom: 0;
+  }
+
+  #art-projects > div {
+    margin-bottom: 0;
+    margin-top:0;
+    width: 50%;
+
+  }
+  #art-projects  div > div:nth-child(2) {
+    padding: 10% 5% 10% 5%;
   }
 
 
 }
 @media only screen and (max-width:480px){
+  #art-projects > div {
+    margin-bottom: 0;
+    margin-top:0;
+    width: 100%;
+  }
+
+  #header {
+    height: 100%;
+  }
   nav {
       display: none;
     }
