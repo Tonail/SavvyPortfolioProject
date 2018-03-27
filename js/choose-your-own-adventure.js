@@ -4,7 +4,7 @@
 var story = {
     "No": {
         "text": "Thanks for playing?",
-        "option": [ "Start", "no" ]
+        "option": [ "start", "No" ]
     },
 
     "Play Again": {
@@ -107,12 +107,21 @@ var $output = $( "#output" ).css( {
 function outputChoice( ){
     var output = $( "#output" );
     var storyDiv =  $story.html( "<p>" + storyChoice.text + "</p>" );
-    var boxOne = $boxOne.html( "<div class='boxOne'><button id='buttonOne'>" + choiceOne + "</button></div>" );
-    var boxTwo = $boxTwo.html( "<div class='boxtwo'><button id='buttonTwo'>" + choiceTwo + "</button></div>" );
+    var buttonOne = $( ".buttonOne" ) ;
+    var buttonTwo = $( ".buttonTwo" );
 
-    output.prepend( storyDiv, boxOne, boxTwo );
+    $boxOne.html( "<div class='boxOne'><button id='buttonOne'>" + choiceOne + "</button></div>" );
+    $boxTwo.html( "<div class='boxtwo'><button id='buttonTwo'>" + choiceTwo + "</button></div>" );
+
+
+    // buttons
+    $( "button#buttonOne" ).on( "click", choose );
+    $( "button#buttonTwo" ).on( "click", choose );
+
+    output.prepend( storyDiv );
     console.log( "Choice outputed." );
 }
+
 function click( e ){
     var commit = e.target;
     var text = commit.innerHTML;
@@ -126,13 +135,11 @@ function click( e ){
     console.log( e ); // console log click event object for inspection
     console.log( text ); // console log click event dom node inner text
 }
+
 // click and output
 function choose( e ){ // passes event callback to click function
     click( e ); // click and set output
     outputChoice();// output
 }
-outputChoice();
 
-// buttons
-$( "button#buttonOne" ).on( "click", choose );
-$( "button#buttonTwo" ).on( "click", choose );
+outputChoice();

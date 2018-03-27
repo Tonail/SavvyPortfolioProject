@@ -50,3 +50,18 @@ $( "form" ).on( "submit", ( event ) => {
     // logs results of function to console for testing
     console.log( posts );
 } );
+
+
+/*
+// takes ajax promise grabs each element and post it on the page.
+
+getPost.then(
+	books => books
+		.map(
+ 			(book) => $("<p>").text(book.title)
+		)
+		.forEach(
+			(book) => $("#content").append(book)
+		)
+)
+*/
