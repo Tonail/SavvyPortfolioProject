@@ -21,13 +21,13 @@ var story = {
     } ,
     "grail": {
         "text": "You make your way to the  the Holy Grail exhibit. While nearing the magical chalace you notice strange markings begin to apppear on the cup. As you move closer the markings become clear 'bibere a me', the grail beacons you. It suddenly fills with blood.  Do you [drink] from the cup? or, resist the urg? ",
-        "option": [ "view", "drink" ]
+        "option": [ "ignore", "drink" ]
     },
     "drink": {
         "text": "Disregarding the not touch signs, you grab the grail. you raise the grail to your mouth and begins to injest the fluid. An all ecompasing warmth fills your body then quickly disapates. You are now colder than ever. You feel very thirsty.",
         "option": [ "bite", "leave" ]
     },
-    "view": {
+    "ignore": {
         "text": "You realize that it is just a goblet and 'you aint got no time for that'",
         "option": [ "Play Again", "No" ]
 

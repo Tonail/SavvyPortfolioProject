@@ -1,4 +1,6 @@
-
+body{
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
 h5 {
   font-size: 1em;
 }
@@ -22,7 +24,7 @@ h2 {
 h3 {
   font-family: sans-serif;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.25em;
 }
 
 /* Navigation */
@@ -128,14 +130,16 @@ nav ul li:hover{
   align-items: center;
   justify-content: center;
   grid-area: content;
-  margin-top: 0;
-  margin-bottom 0;
+  margin-top: -10px;
+  margin-bottom: 0;
   padding-left: 10%;
   padding-right: 10%;
   z-index:3;
-  height: 100%
+  padding-top: 50px
 }
-
+#content .flush-top{
+margin-top: -35px;
+}
 
 
 #content > div:first-child {
@@ -162,6 +166,11 @@ nav ul li:hover{
   margin-bottom: 5px;
 
   width: 100vw;
+}
+
+.form{
+  width:100%;
+  display: none;
 }
 
 
