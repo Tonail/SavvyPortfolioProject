@@ -16,19 +16,19 @@ var story = {
         "option": [ "start", "No" ]
     },
     "start": {
-        "text": "Welcome to the Creep ville's museum of aniquities, What bring you in today? Do you visit the Holy Grail, or the Mummy exibit?",
+        "text": "Welcome to the Creeps ville's museum of antiquities, what bring you in today? Would you like to visit the Holy Grail, or the Mummy exhibit?",
         "option": [ "mummy", "grail" ]
     } ,
     "grail": {
-        "text": "You make your way to the  the Holy Grail exhibit. While nearing the magical chalace you notice strange markings begin to apppear on the cup. As you move closer the markings become clear 'bibere a me', the grail beacons you. It suddenly fills with blood.  Do you [drink] from the cup? or, resist the urg? ",
+        "text": "You make your way to the the Holy Grail exhibit. All seems normal. While nearing the magical chalice you notice strange markings begin to appear on the side of the goblet. As you move closer to see, the markings become clear 'bibere a me'. The grail beacons you. It suddenly fills with blood. Do you drink from the Holy-Grail? Or, resist the urge?",
         "option": [ "ignore", "drink" ]
     },
     "drink": {
-        "text": "Disregarding the not touch signs, you grab the grail. you raise the grail to your mouth and begins to injest the fluid. An all ecompasing warmth fills your body then quickly disapates. You are now colder than ever. You feel very thirsty.",
+        "text": "Disregarding the no touch signs, you reach for the grail. After getting your shakey mortal hands on the goblet,  you raise it to your mouth and slowly begin to ingest the fluid. An all encompassing warmth fills your body with an powerful and unexpected pleasure, then quickly dissipates. You are now colder than ever. You feel very thirsty. Very thirsty...",
         "option": [ "bite", "leave" ]
     },
     "ignore": {
-        "text": "You realize that it is just a goblet and 'you aint got no time for that'",
+        "text": "You treat it as just another cup. You 'Ain't got no time for that'.",
         "option": [ "Play Again", "No" ]
 
     },
@@ -38,15 +38,15 @@ var story = {
 
     },
     "bite": {
-        "text": "You bite the neck of the first Human you see in the museum. Congrats you are now a vampire",
+        "text": "After searching for and finding a water fountain to quench this new painful thirst. You hear a faint beating sound coming from behind you while you bend over to drink. The beat  gets louder.  The water seems to not be hitting the spot. You turn around to notice the sound coming from the neck of the man behind you in line... You pounce on the him and begin to drink his blood. Congrats you are now a vampire",
         "option": [ "Play Again", "No" ]
     },
     "leave": {
-        "text": "You drop the grail and run out of the museum, the last rays of the days sun creep around a tall building and grace your arm with its light. The skin on your arm noticably smokes then burns. Congrats you are now a vamipre ",
+        "text": "You drop the grail and run out of the museum, the last rays of the days sun creep around a tall building and grace your arm with its light. The skin on your arm noticeably smokes then burns. Congrats you are now a vampire.",
         "option": [ "Play Again", "No" ]
     },
     "mummy": {
-        "text": "You see that the exhibit is empty and go home dissapointed",
+        "text": "“Mummy more like Dummy”. You see that the exhibit is empty and go home disappointed.",
         "option": [ "Play Again", "No" ]
 
     }
