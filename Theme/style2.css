@@ -447,6 +447,7 @@ textarea[name="user_message"] {
 }
 
 @media only screen and (max-width:750px){
+
   #art-projects {
     border-style: none;
     border-radius: 0;
@@ -464,8 +465,12 @@ textarea[name="user_message"] {
     margin: 0;
 
   }
+  #content .flush-top{
+  margin-top: -6px;
+  }
+
   #content{
-    padding:0;
+    padding: 20px;
   }
   #code-projects {
     display: flex;
@@ -501,22 +506,15 @@ textarea[name="user_message"] {
   #art-projects  div > div:nth-child(2) {
     padding: 10% 5% 10% 5%;
   }
-
-
-}
-@media only screen and (max-width:480px){
-  #content{
-    padding: 20px;
-
-  }
-  #content .flush-top{
-  margin-top: -6px;
-  }
   #art-projects > div {
     margin-bottom: 0;
     margin-top:0;
     width: 100vw;
   }
+
+
+}
+@media only screen and (max-width:480px){
 
 
   #header {
