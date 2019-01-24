@@ -1,4 +1,4 @@
-# **Welcome**, to the my Savvy Github.
+# **Welcome**, to the my Savvy Coders portfolio project.
 ## **Tony Bush**
 ![Tony Bush](https://avatars3.githubusercontent.com/u/34554197?s=460&v=4)
 ### **Contact**
