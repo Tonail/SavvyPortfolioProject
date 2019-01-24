@@ -2,7 +2,7 @@
 
 This project marks my intro to programming **Tony Bush** also known as **Tonail**. It was developed durring my time at **Savvy Coders** as a static  personal portfolio website. I hope you enjoy. 
 
-![Tony Bush](https://avatars3.githubusercontent.com/u/34554197?s=460&v=4=100x100)
+![Tony Bush](https://avatars3.githubusercontent.com/u/34554197?s=460&v=4=50x50)
 
 **here is a link to the [site](savvytonail.netlify.com)**
 
