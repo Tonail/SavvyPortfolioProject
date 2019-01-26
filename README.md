@@ -4,7 +4,7 @@ This project marks my intro to programming **Tony Bush** also known as **Tonail*
 
 ![Tony Bush](https://avatars3.githubusercontent.com/u/34554197?s=460&v=4=50x50)
 
-**here is a link to the [site](savvytonail.netlify.com)**
+**here is a link to the [site](https://savvytonail.netlify.com/)**
 
 
 ### **Contact**
